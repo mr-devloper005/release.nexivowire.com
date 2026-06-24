@@ -12,16 +12,16 @@ export type TaskPageVoice = {
 export const taskPageVoices = {
   mediaDistribution: {
     eyebrow: 'Media desk',
-    headline: 'Newsroom updates and media distribution built for fast public discovery.',
-    description: 'Publish announcements, company news, press coverage, and media updates across dynamic categories controlled by the master panel.',
+    headline: 'A premium archive for releases, coverage, and media-ready updates.',
+    description: 'Publish announcements, company news, and press coverage through a layout built to feel closer to a product destination than a generic feed.',
     filterLabel: 'Choose media category',
-    secondaryNote: 'Every category received from the master panel is supported automatically.',
-    chips: ['News Media', 'Dynamic categories', 'Press-ready'],
+    secondaryNote: 'Every category received from the master panel is still supported automatically.',
+    chips: ['Coverage ready', 'Category-led', 'Fast discovery'],
   },
   article: {
     eyebrow: 'Reading desk',
-    headline: 'Long-form articles with a calmer editorial rhythm.',
-    description: 'Use this page for essays, guides, explainers, and story-led posts. The layout should feel like a publication, not a directory.',
+    headline: 'Long-form articles with a polished editorial rhythm.',
+    description: 'Use this page for essays, guides, explainers, and thought pieces presented in the same premium visual system.',
     filterLabel: 'Choose article topic',
     secondaryNote: 'Reading surfaces need space, hierarchy, and fewer distractions.',
     chips: ['Editorial pacing', 'Topic filters', 'Long-read friendly'],
@@ -29,7 +29,7 @@ export const taskPageVoices = {
   classified: {
     eyebrow: 'Notice board',
     headline: 'Fast-moving classifieds, offers, and time-sensitive posts.',
-    description: 'Classified content should feel quick to scan, practical, and action-oriented with less editorial decoration.',
+    description: 'Classified content should scan quickly while still feeling aligned with the broader premium site design.',
     filterLabel: 'Filter classified category',
     secondaryNote: 'Prioritize urgency, short summaries, and direct browsing.',
     chips: ['Fast scan', 'Offers', 'Action cues'],
