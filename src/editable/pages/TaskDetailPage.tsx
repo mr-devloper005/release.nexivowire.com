@@ -123,7 +123,6 @@ function BackLink({ task }: { task: TaskKey }) {
 function ArticleDetail({ task, post, related, comments }: { task: TaskKey; post: SitePost; related: SitePost[]; comments: Array<{ id: string; name: string; comment: string; createdAt: string }> }) {
   const images = getImages(post)
   const leadImage = images[0]
-  const published = post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : ''
   return (
     <section>
       <header className="nexivo-dark-shell text-white">
@@ -131,7 +130,7 @@ function ArticleDetail({ task, post, related, comments }: { task: TaskKey; post:
           <BackLink task={task} />
           <div className={`mt-12 ${leadImage ? 'grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end' : ''}`}>
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.28em] text-white/68">{categoryOf(post, 'News')} {published ? `• ${published}` : ''}</p>
+              <p className="text-xs font-black uppercase tracking-[0.28em] text-white/68">{categoryOf(post, 'News')} </p>
               <h1 className="mt-5 max-w-5xl text-5xl font-black leading-[0.94] tracking-[-0.06em] sm:text-6xl lg:text-[5rem]">{post.title}</h1>
               {summaryText(post) ? <p className="mt-6 max-w-3xl text-lg leading-8 text-white/78 sm:text-2xl">{summaryText(post)}</p> : null}
             </div>
@@ -388,7 +387,6 @@ function RelatedPanel({ task, post, related, compact = false }: { task: TaskKey;
           <div className="mt-4 grid gap-3 text-sm font-bold opacity-75">
             <p className="inline-flex items-center gap-2"><Tag className="h-4 w-4" /> Task: {taskConfig?.label || task}</p>
             <p className="inline-flex items-center gap-2"><CheckCircle2 className="h-4 w-4" /> Site: {SITE_CONFIG.name}</p>
-            {post.publishedAt ? <p>Published: {new Date(post.publishedAt).toLocaleDateString()}</p> : null}
           </div>
         </div>
       ) : null}
